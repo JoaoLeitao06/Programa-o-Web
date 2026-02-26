@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição para Evento</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Torneio de Futsal Interturmas da UBI
+        </h1>
+        <img src="img%20UBI.jpg" alt="Logótipo da UBI">
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Programação</a></li>
+                <li><a href="https://www.google.com/maps/..." target="_blank">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Inscrição</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Insira o seu nome" maxlength="50" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                <br>
+                <label for="pagina_pessoal">Pagina Pessoal:</label>
+                <input type="url" id="pagina_pessoal" name="pagina_pessoal">
+                <br>
+                <label for="codigo_postal">Codigo Postal:</label>
+                <input type="text" id="codigo_postal" name="codigo_postal" pattern="[0-9]{4}-[0-9]{3}">
+                <br>
+                <label for="tipo_ingresso"> Ingresso:</label>
+                <select name="Tipo_de_Ingresso" id="tipo_ingresso" required>
+                    <option value="" disabled selected>Escolha um ingresso</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Estudante">Estudante</option>
+                    <option value="Professor">Professor</option>
+                </select>
+                <br>
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto">
+                <br>
+
+                <!-- Caixa de seleção para aceitar os termos e condições -->
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">Aceito os termos e condições</label>
+                <br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contacto: <a href="mail_to:info@ubi.pt">info@ubi.pt</a></p>
+        <p>© 2026 Torneio de Futsal Interturmas da UBI. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
