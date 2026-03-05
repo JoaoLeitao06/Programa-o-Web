@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.auth-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* Propriedades do botão dentro da div com a classe submitbutton  */
+div .submitbutton {
+    /* Fontes e Tamanhos */
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Espaçamento e Cores */
+    padding: 12px 24px;
+    background-color: #007bff;
+    border: 2px solid #0056b3;
+    
+    /* Forma e Bordas */
+    border-radius: 25px; /* Arredondar cantos */
+    outline: none; /* Remover estilo padrão da borda ao clicar */
+    
+    /* Interação */
+    cursor: pointer; /* Mudar para ponteiro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: all 0.3s ease; /* Efeito de transição */
+    color: white;
+    width: 100%;
+}
+
+/* Efeitos para quando o rato estiver sobre o botão (Hover) */
+div .submitbutton:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); /* Pequeno efeito de "levantar" */
+}
