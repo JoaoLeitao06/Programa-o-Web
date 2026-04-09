@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Armazenamento no Browser</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        section { margin-bottom: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Armazenamento</h1>
+
+    <section>
+        <h3>LocalStorage & SessionStorage</h3>
+        <input type="text" id="nome" placeholder="Introduz o teu nome">
+        <button onclick="guardarLocal()">Guardar LocalStorage</button>
+        <button onclick="guardarSession()">Guardar SessionStorage</button>
+        <button onclick="lerDados()">Ler Dados (Consola)</button>
+    </section>
+
+    <section>
+        <h3>IndexedDB - Gestão de Alunos</h3>
+        <input type="number" id="alunoId" placeholder="ID do Aluno">
+        <input type="text" id="alunoNome" placeholder="Nome do Aluno">
+        <input type="text" id="alunoCurso" placeholder="Curso">
+        <button onclick="guardarAluno()">Adicionar Aluno</button>
+        <button onclick="listarAlunos()">Listar Alunos</button>
+        
+        <table id="tabelaAlunos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Curso</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log("Service Worker Registado"));
+        }
+    </script>
+</body>
+</html>
