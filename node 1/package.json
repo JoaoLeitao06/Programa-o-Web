@@ -1,0 +1,13 @@
+{
+  "name": "lab-node-01",
+  "version": "1.0.0",
+  "description": "Aplicação ExpressJS para o Laboratório Node 01",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test-endpoints.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4"
+  }
+}
