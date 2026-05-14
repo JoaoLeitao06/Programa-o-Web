@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Plano - GREENHERB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho Principal -->
+        <header class="app-header">
+            <div>
+                <h1>🌱 GREENHERB</h1>
+                <p>Registo de Plano</p>
+            </div>
+            <div class="user-info">
+                <span id="userNameDisplay">Carregando...</span>
+                <span id="userRoleBadge" class="badge">Role</span>
+                <button id="btnLogout" class="btn-logout">Sair</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Botão de Voltar -->
+            <div style="margin-bottom: 20px;">
+                <button onclick="window.location.href='index.html'" class="btn-secondary">← Voltar ao Dashboard</button>
+            </div>
+
+            <section class="form-section">
+                <h2>Implementar Novo Plano de Cultivo</h2>
+                <form id="planoForm">
+                    <div class="form-group">
+                        <label for="nomePlano">Nome do Plano:</label>
+                        <input type="text" id="nomePlano" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ervaAromatica">Erva Aromática:</label>
+                        <select id="ervaAromatica" required>
+                            <option value="">Selecione...</option>
+                            <option value="Manjericao">Manjericão</option>
+                            <option value="Hortela">Hortelã</option>
+                            <option value="Alecrim">Alecrim</option>
+                            <option value="Tomilho">Tomilho</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipoPlano">Tipo de Plano:</label>
+                        <select id="tipoPlano" required>
+                            <option value="">Selecione o tipo...</option>
+                            <option value="Regular">Regular</option>
+                            <option value="Emergencia">Emergência</option>
+                            <option value="Pontual">Pontual</option>
+                        </select>
+                    </div>
+
+                    <!-- Campos Específicos: Regular -->
+                    <div id="camposRegular" class="dynamic-fields hidden">
+                        <h3>Condições Regulares</h3>
+                        <div class="form-row">
+                            <input type="text" id="tempMin" placeholder="Temp. Mínima (°C)">
+                            <input type="text" id="tempMax" placeholder="Temp. Máxima (°C)">
+                        </div>
+                        <input type="text" id="planoRega" placeholder="Plano de Rega (ex: 2x ao dia)">
+                    </div>
+
+                    <!-- Campos Específicos: Emergência -->
+                    <div id="camposEmergencia" class="dynamic-fields hidden">
+                        <h3>Condições de Emergência</h3>
+                        <input type="text" id="tipoIntervencao" placeholder="Tipo de Intervenção">
+                        <input type="text" id="dosagem" placeholder="Dosagem / Intensidade">
+                    </div>
+
+                    <!-- Campos Específicos: Pontual -->
+                    <div id="camposPontual" class="dynamic-fields hidden">
+                        <h3>Intervenção Pontual</h3>
+                        <input type="text" id="motivoPontual" placeholder="Motivo da Intervenção">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="autorizacaoResp">
+                            <label for="autorizacaoResp">Tenho autorização explícita do Responsável Técnico</label>
+                        </div>
+                        <p id="avisoAutorizacao" class="msg-error hidden" style="margin-top: 10px; font-size: 0.85rem;">
+                            Aviso: O teu perfil não permite autorizar planos pontuais. Contacta um Responsável.
+                        </p>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Guardar Plano</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

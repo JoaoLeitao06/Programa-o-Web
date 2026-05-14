@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GREENHERB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho Principal -->
+        <header class="app-header">
+            <div>
+                <h1>🌱 GREENHERB</h1>
+                <p>Dashboard Principal</p>
+            </div>
+            <div class="user-info">
+                <span id="userNameDisplay">Carregando...</span>
+                <span id="userRoleBadge" class="badge">Role</span>
+                <button id="btnLogout" class="btn-logout">Sair</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Barra de Ações Rápidas -->
+            <div class="action-bar">
+                <h2>Visão Geral da Estufa</h2>
+                <button onclick="window.location.href='novo-plano.html'" class="btn-primary">+ Implementar Novo
+                    Plano</button>
+            </div>
+
+            <!-- Estatísticas (Simuladas para o Dashboard) -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalPlanos">0</h3>
+                    <p>Planos Registados</p>
+                </div>
+                <div class="stat-card emergencias">
+                    <h3 id="totalEmergencias">0</h3>
+                    <p>Planos de Emergência</p>
+                </div>
+            </section>
+
+            <!-- Lista de Planos -->
+            <section class="list-section">
+                <h2>Histórico de Planos de Cultivo</h2>
+                <div id="listaPlanos" class="plan-grid">
+                    <!-- Os planos vão aparecer aqui via JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
