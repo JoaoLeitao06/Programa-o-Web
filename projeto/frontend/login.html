@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - GREENHERB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-header">
+            <h1>🌱 GREENHERB</h1>
+            <p>Gestão de Estufa</p>
+        </div>
+
+        <!-- Abas de Navegação -->
+        <div class="tabs">
+            <button class="tab-btn active" id="tabLoginBtn">Entrar</button>
+            <button class="tab-btn" id="tabRegisterBtn">Criar Conta</button>
+        </div>
+
+        <!-- FORMULÁRIO DE LOGIN -->
+        <form id="loginForm" class="auth-form">
+            <div class="form-group">
+                <label for="loginUsername">Utilizador:</label>
+                <input type="text" id="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Palavra-passe:</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn-submit">Entrar</button>
+            <p id="loginMessage" class="msg-box hidden"></p>
+        </form>
+
+        <!-- FORMULÁRIO DE REGISTO (SIGN UP) -->
+        <form id="registerForm" class="auth-form hidden">
+            <div class="form-group">
+                <label for="regNome">Nome Completo:</label>
+                <input type="text" id="regNome" required>
+            </div>
+            <div class="form-group">
+                <label for="regUsername">Nome de Utilizador:</label>
+                <input type="text" id="regUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Palavra-passe:</label>
+                <input type="password" id="regPassword" required>
+            </div>
+            <button type="submit" class="btn-submit" style="background-color: #1976d2;">Registar</button>
+            <p id="registerMessage" class="msg-box hidden"></p>
+        </form>
+
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

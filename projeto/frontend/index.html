@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GREENHERB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho Principal -->
+        <header class="app-header">
+            <div>
+                <h1>🌱 GREENHERB</h1>
+                <p>Dashboard Principal</p>
+            </div>
+            <div class="user-info">
+                <span id="userNameDisplay">Carregando...</span>
+                <span id="userRoleBadge" class="badge">Role</span>
+                <button onclick="fazerLogout()" id="btnLogout" class="btn-logout">Sair</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Barra de Ações Rápidas -->
+            <div class="action-bar">
+                <h2>Visão Geral da Estufa</h2>
+                <div>
+                    <button id="btnGestaoUtilizadores" class="btn-secondary hidden" style="margin-right: 10px;">
+                        ⚙️ Gestão de Utilizadores
+                    </button>
+                    <button onclick="window.location.href='novo-plano.html'" class="btn-primary">
+                        + Implementar Novo Plano
+                    </button>
+                </div>
+            </div>
+
+            <section id="adminSection" class="list-section hidden">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>Gestão de Contas</h2>
+                    <button onclick="location.reload()" class="btn-secondary">← Voltar</button>
+                </div>
+                <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Username</th>
+                        <th>Perfil</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaUtilizadores"></tbody>
+                </table>
+            </section>
+
+            <div id="avisoPendente" class="msg-box msg-warning hidden" style="margin-bottom: 20px;">
+                ⚠️ A tua conta está sob revisão. Poderás visualizar os planos, mas a criação de novos registos está desativada.
+            </div>
+
+            <!-- Estatísticas (Simuladas para o Dashboard) -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalPlanos">0</h3>
+                    <p>Planos Registados</p>
+                </div>
+                <div class="stat-card emergencias">
+                    <h3 id="totalEmergencias">0</h3>
+                    <p>Planos de Emergência</p>
+                </div>
+            </section>
+
+            <!-- Lista de Planos -->
+            <section class="list-section">
+                <h2>Histórico de Planos de Cultivo</h2>
+                <div id="listaPlanos" class="plan-grid">
+                    <!-- Os planos vão aparecer aqui via JS -->
+                </div>
+            </section>
+            <section id="adminSection" class="list-section hidden">
+                <h2>Gestão de Utilizadores (Admin)</h2>
+                <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Username</th>
+                        <th>Perfil Atual</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaUtilizadores">
+                </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
